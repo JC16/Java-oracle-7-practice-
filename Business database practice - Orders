@@ -1,0 +1,10 @@
+package com.khh.domain;
+
+import java.util.Date;
+
+public class Orders {
+    public int orderId;
+    public Date orderDate;
+    public Date shippedDate;
+    public Customer_Infor customers;
+}
