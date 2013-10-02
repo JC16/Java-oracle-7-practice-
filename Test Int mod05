@@ -1,0 +1,14 @@
+package mod05;
+
+public class TestInt {
+   public static void main(String[] args)
+   {
+	   int i1=100, i2=200, i3=300;
+	   short s1=1, s2=2;
+	   long l1=123456709876454321L;
+	   long r1=l1+i1+i2+i3+s1+s2;
+	   double d1=10/4.0;
+	   System.out.printf("%s\n%s",r1,d1);
+	   
+   }
+}
