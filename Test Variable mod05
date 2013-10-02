@@ -1,0 +1,16 @@
+package mod05;
+
+public class TestVariable {
+	int var;
+	public static void main(String[] args)
+	{
+		int var;
+		var=100;
+		System.out.println(var);
+	}
+		{
+			double money=100.5;
+			System.out.println(money);
+		}
+
+}
