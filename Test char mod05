@@ -1,0 +1,12 @@
+package mod05;
+
+public class Testchar {
+   public static void main(String[] args)
+   {
+	   String hello="\"jc\" hello world";
+	   System.out.println(hello);
+	   
+	   char c='a';
+	   System.out.println(c);
+   }
+}
