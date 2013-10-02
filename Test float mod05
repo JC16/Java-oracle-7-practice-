@@ -1,0 +1,12 @@
+package mod05;
+
+public class Testfloat {
+   public static void main(String[] args)
+   {
+	   float f1=10.0f;
+	   final double PI=3.14159;
+	   float f2=(float)PI;
+	   System.out.println(f2);
+	   
+   }
+}
