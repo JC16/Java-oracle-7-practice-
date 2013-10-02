@@ -1,0 +1,10 @@
+package mod05;
+
+public class Testboolean {
+  public static void main(String[] args)
+  {
+	  boolean r=true;
+	  r=100>200;
+	  System.out.println(r);
+  }
+}
