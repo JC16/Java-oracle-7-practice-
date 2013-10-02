@@ -12,6 +12,9 @@ public class TestInteger {
 	   byte b5=100;
 	   int i1=100;
 	   System.out.printf("%s,%s,%s,%s,%s",b1,b2,b3,b4,b5);
-			  
+       short s1=100, s2=20000, s3=10000,s4;
+       int i4=s2+s3;
+       s4=(short)(s2+s3);
+       System.out.printf("\nInt%s\nshort%s",i4,s4);
    }
 }
