@@ -1,0 +1,21 @@
+package com.khh.app;
+
+public class TestshortRelation {
+	public static void main(String[] args)
+	{
+		int i1=100,i2=200,i3=300,i4=400;
+		if(i1<i2 && compare(i3,i4))
+		{
+			System.out.println("Ture");
+		}
+		else
+		{
+			System.out.println("False");
+		}
+	}
+	public static boolean compare(int r1, int r2)
+	{
+		System.out.println("System works");
+		return r1>r2;
+	}
+}
