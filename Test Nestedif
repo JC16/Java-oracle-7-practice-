@@ -5,9 +5,12 @@ import java.util.Scanner;
 public class TestNestedif {
     public static void main(String[] args)
     {
+        //輸出文字
     	System.out.println("Please enter score(1~100):");
+    	//建構Scanner物件與InputStream物件互動
     	Scanner scanner=new Scanner(System.in);
     	int scope=scanner.nextInt();
+    	//巢狀判斷式
     	System.out.println(scope);
     }
 }
