@@ -1,0 +1,35 @@
+
+public class Testswitch {
+	public static final int SQLSERVER=1;
+	public static final int ORCALE=2;
+	public static final int INFORMIX=3;
+	public static final int MYSQL=4;
+	public static void main(String[] agrs)
+	{
+		int sqltype=1;
+		switch(sqltype)
+		{
+		case SQLSERVER:
+			{
+				System.out.println("choose SQL server");
+				int r1=100;
+				break;
+			}
+		case ORCALE:
+			{
+				System.out.println("choose orcale");
+				int r1=100;
+				break;
+			}
+		case INFORMIX:
+			{
+				System.out.println("choose informix");
+				int r1=300;
+			}
+		case MYSQL:
+			{
+				System.out.println("choose Mysql");
+			}
+		}
+	}
+}
