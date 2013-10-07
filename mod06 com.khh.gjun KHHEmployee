@@ -1,0 +1,38 @@
+package com.khh.app;
+import com.khh.gjun.KHHEmployee;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+public class TestKHHEmployee {
+	//主程式
+	
+	public static void main(String[] args) throws ParseException
+	{
+		//定義區域變數 同時建構物件 同時給物件參考位址給emp
+		KHHEmployee emp=new KHHEmployee(); //預設建構子
+		emp.id=100;
+		emp.name="張三豐";
+		emp.address="高雄市";
+		//emp.salary=-50000; //不合理  salary屬性設定為封裝性
+		emp.setSalary(50000);
+		double s=emp.getSalary();
+		//取出今天
+		Date today=new Date();
+		//建構簡易型別物件
+		SimpleDateFormat df=new SimpleDateFormat("yyyy/MM/dd");
+		String d=df.format(today);
+		//設定生日
+		String day="2013/10/8";
+		df.setCalendar(Calendar.getInstance(Locale.TAIWAN));
+		//分析字串為Date型別
+		Date birth=df.parse(day);
+		emp.setBirthDate(birth);
+		System.out.println(emp.getBirthDate());
+		
+		
+	}
+
+}
