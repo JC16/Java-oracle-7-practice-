@@ -8,7 +8,7 @@ public class TestNestedIf {
 	//主程式
 	public static void main(String[] args) throws IOException
 	{
-		/*java.net.URL url=new java.net.URL("http://www.pcschool.com.tw");
+		java.net.URL url=new java.net.URL("http://www.pcschool.com.tw");
 		java.net.HttpURLConnection conn=(java.net.HttpURLConnection)url.openConnection();
 		InputStream in=conn.getInputStream();
 		Scanner scanner=new Scanner(in);
@@ -16,7 +16,7 @@ public class TestNestedIf {
 		while(content!=null){
 					System.out.println(content);
 					content=scanner.next();
-		}*/
+		}
 		
 	}
 
