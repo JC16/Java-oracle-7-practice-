@@ -1,0 +1,13 @@
+package com.khh.app;
+
+import java.util.Scanner;
+
+public class TestNestedif {
+    public static void main(String[] args)
+    {
+    	System.out.println("Please enter score(1~100):");
+    	Scanner scanner=new Scanner(System.in);
+    	int scope=scanner.nextInt();
+    	System.out.println(scope);
+    }
+}
