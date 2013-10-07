@@ -12,19 +12,19 @@ public class TestNestedif {
     	int scope=scanner.nextInt();
     	//巢狀判斷式
     	System.out.println(scope);
-    	if (scope>=90 && scope<=100)
+    if (scope>=90 && scope<=100)
     	{
     		System.out.println("A");
-    	}else if(scope>=80 && scope<=90)
+    	}else if(scope>=80 & scope<90)
     	{
     		System.out.println("B");
-    	}else if(scope>=70 && scope<=80)
+    	}else if(scope>=70 & scope<80)
     	{
     		System.out.println("C");
-    	}else if(scope>=60 && scope<=70)
+    	}else if(scope>=60 & scope<70)
     	{
     		System.out.println("D");
-    	}else if(scope<=60 && scope>=0)
+    	}else if(scope<60 & scope>=0)
     	{
     		System.out.println("F");
     	}else
