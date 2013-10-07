@@ -1,0 +1,23 @@
+package com.khh.app;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.util.Scanner;
+
+public class TestNestedIf {
+	//主程式
+	public static void main(String[] args) throws IOException
+	{
+		/*java.net.URL url=new java.net.URL("http://www.pcschool.com.tw");
+		java.net.HttpURLConnection conn=(java.net.HttpURLConnection)url.openConnection();
+		InputStream in=conn.getInputStream();
+		Scanner scanner=new Scanner(in);
+		String content=scanner.next()
+		while(content!=null){
+					System.out.println(content);
+					content=scanner.next();
+		}*/
+		
+	}
+
+}
