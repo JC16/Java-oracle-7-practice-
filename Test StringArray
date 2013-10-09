@@ -1,0 +1,22 @@
+
+public class TestStringArray {
+	public static void main(String[] args)
+	{
+		//定義字串類別陣列
+		String[] names=new String[10];
+		System.out.println(names.length);
+		//設定每一個元素(放位址)對應的字串物件
+		names[0]="eric";
+		names[1]="bill";
+		names[2]="sam";
+		names[3]="richard";
+		//System.out.println(names[2]);
+		//System.out.println(names[9]);
+		for(int i=0;i<names.length;i++)
+		{
+			System.out.println(names[i]);
+		}
+		
+	}
+
+}
