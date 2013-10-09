@@ -1,0 +1,23 @@
+public class TestStringReplace {
+	public static void main(String[] args)
+	{
+		String s1="eric"; //eric字串堆積了 位址給 String pooling集區
+		//集區位只給 s1
+		String s2="eric"; //發現集區已經對這樣字串物件 沒有產生新的字串物件
+		boolean r1=s1==s2; //使用同樣的集區位址
+		System.out.println(r1);
+		s2="bill";
+		System.out.printf("s1=%s  s2=%s \n",s1,s2);
+		
+		//使用建構子 不會使用String Pooling
+		String s3=new String("eric");
+		String s4=new String("eric");
+		//s3 s4面對兩個獨立個體字串物件
+		boolean r2=s3==s4; //s3==s4 個自獨立的物件位址
+		System.out.println(r2);
+		//比較物件內容是否一樣
+		boolean r3=s3.equals(s4);
+		System.out.println(r3);
+	}
+
+}
