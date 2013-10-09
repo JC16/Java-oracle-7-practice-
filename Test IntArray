@@ -1,0 +1,29 @@
+package mod08array;
+//整數基本型別陣列(陣列就是參考型別)
+public class TestIntArray {
+	public static void main(String[] args)
+	{
+		//定義一個維度(Dimension)陣列 變數是位址 參考陣列連續元素Element空間
+		int[] iar=null;
+		//規劃五個陣列元素(Heap) = 將位址給iar
+		iar=new int[5];  //陣列元素具有順序性 順序從零開始算第一個
+		
+		int[] iar2=new int[10];
+		System.out.println(iar[1]); //陣列元素在Heap空間 具有預設值
+		
+		//問陣列有多少個元素
+		System.out.println(iar.length);
+		iar[0]=100;
+		iar[1]=200;
+		iar[2]=300;
+		iar[3]=400;
+		iar[4]=500;
+		//一個一個問出來 次數迴圈for loop
+		//for(順序初始值;條件;遞增或者遞減)
+		for(int p=0;p<iar.length;p++)
+		{
+			int v=iar[p];
+			System.out.println(v);
+		}
+		
+		
