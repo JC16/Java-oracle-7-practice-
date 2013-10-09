@@ -1,0 +1,16 @@
+package mod08array;
+//陣列定義與初始化(Initializer)
+public class Test ArrayInitialzer {
+	public static void main(String[] args)
+	{
+		//整數陣列(數值已經收集好了)
+		int[] iar=new int[]{1,2,3,4,5,6,7,8,9,10};
+		System.out.println(iar.length);
+		
+		String[] name=null; //資料尚未收集
+		//資料已經準備好了
+		name=new String[]{"allen","bill","candy","deby","frank","richard"};
+		System.out.println(name.length);
+	}
+
+}
