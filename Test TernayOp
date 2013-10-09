@@ -1,0 +1,25 @@
+//三元運算子
+public class TestTernayOp {
+	//主程式
+	public static void main(String[] args)
+	{
+		int i1=100,i2=200;
+		String result;
+		if(i1>i2)
+		{
+			//String共用功能(static) format 整理一個字串物件
+			result=String.format("%d>%d ",i1,i2);
+		}else
+		{
+			result=String.format("%d<=%d " ,i1,i2);
+		}
+		System.out.println(result);
+		
+		//改成三元運算
+		String result2;
+		result2=i1>i2?String.format("%d>%d ",i1,i2):String.format("%d<=%d " ,i1,i2);
+		System.out.println(result2);
+		
+	}
+
+}
