@@ -1,0 +1,20 @@
+package mod09loop;
+//條件式迴圈
+public class TestWhile {
+	public static void main(String[] args) throws InterruptedException
+	{
+	
+		int i=1;
+		while(true) //條件迴圈 boolean型別 無窮盡迴圈
+		{
+			System.out.println(i);
+			Thread.sleep(200);
+			i++;
+	if(i==50)
+			{
+				break;
+			}
+			
+		}
+		System.out.println("Finish");
+}
