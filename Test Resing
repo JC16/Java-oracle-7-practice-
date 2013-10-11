@@ -1,0 +1,27 @@
+package mod08array;
+//陣列元素是否可以調整
+public class TestResing {
+	public static void main(String[] args)
+	{
+		int[] iar=new int[5];
+		iar[0]=1;
+		iar[1]=2;
+		iar[2]=3;
+		iar[3]=4;
+		iar[4]=5;
+		//超過元素設定
+		//iar[5]=6;
+		//準備一個陣列元素
+		int[] iar2=new int[10];
+		//第一個參數:來源陣列 第二參數:來源元素位址 第三參數目標陣列,第四個參數目標陣列要開始到的元素
+		//第五個參數 倒數量
+		System.arraycopy(iar,0, iar2,0,iar.length);
+		//切斷舊陣列
+		iar=null;
+		for(int i=0;i<iar2.length;i++)
+		{
+			System.out.printf("[%d]=%d\n",i,iar2[i]);
+		}
+	}
+
+}
