@@ -1,0 +1,22 @@
+package mod09loop;
+//跑次數迴圈
+public class TestForLoop {
+	public static void main(String[] args) throws InterruptedException
+	{
+		int i=0;
+		for(;;) //沒有條件 就是恆為成立 無窮盡迴圈
+		{
+			System.out.println(i);
+			//故意慢
+			Thread.sleep(200); //Blocked 0.2秒
+			i++;
+			if(i==30)
+			{
+				//結束迴圈
+				break;
+			}
+		}
+		System.out.println("結束了!!");
+	}
+
+}
