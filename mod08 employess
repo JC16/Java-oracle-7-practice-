@@ -1,0 +1,31 @@
+package com.khh.domain;
+
+public class Employee {
+	//封裝性資訊隱藏 private最小可見度 限同一個看得到
+	private String id;
+	private String name;
+	//自訂建構子 往往具有參數(Object Initialzer) 沒有預設建構子
+	//建構子名稱與類別名稱一樣 不具有回應值 不能void
+	public Employee(String id,String name){
+		this.id=id;
+		this.name=name;
+	}
+	//setter 設定
+	public void setId(String id)
+	{
+		this.id=id;
+	}
+	//getter 取得
+	public String getId()
+	{
+		return id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+
+}
