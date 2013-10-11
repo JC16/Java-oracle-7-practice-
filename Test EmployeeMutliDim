@@ -1,0 +1,41 @@
+package mod08array;
+
+import com.khh.domain.Employee;
+
+//類別型別多維度陣列初始化
+public class TestEmployeeMutliDim {
+	public static void main(String[] args)
+	{
+		//區域變數
+		Employee[][] emps;
+		
+		emps=new Employee[][]{
+				{new Employee("0001","allen"),
+				 new Employee("0002","barry"),
+				 new Employee("0003","candy")},
+				{
+				 new Employee("0004","daby"),
+				 new Employee("0005","frank"),
+				 new Employee("0006","green")
+				},
+				{
+				new Employee("0007","tom"),
+				new Employee("0008","tony"),
+				new Employee("0009","richard")	
+				}
+				
+		};
+		
+		for(int i=0;i<emps.length;i++)
+		{
+			for(int k=0;k<emps[i].length;k++)
+			{
+				System.out.printf("部門:[%d] 員工資訊:編號:%s 姓名:%s \n",i,emps[i][k].getId(),
+						emps[i][k].getName());
+			}
+		}
+		
+		
+	}
+
+}
