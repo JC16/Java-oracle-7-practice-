@@ -1,0 +1,33 @@
+package mod09loop;
+//正常寫法
+public class TestForNext {
+	public static void main(String[] args)
+	{
+		int[] iar={1,2,3,4,5,6,7,8,9,10};
+		//合計陣列元素
+		int total=0;
+		//for loop掃出每一個元素值
+		for(int p=0;p<iar.length;p++)
+		{
+			//取出相對順序的陣列元素
+			total+=iar[p]; //total=total+iar[p];
+		}//p活到這裡
+		System.out.printf("1-10總和:%d \n",total);
+		
+		//變形寫法
+		int p=0;
+		total=0; //reset
+		for(;;)
+		{
+			if(p>=iar.length)
+			{
+				break;
+			}
+			//取出相對順序的陣列元素
+			total+=iar[p]; //total=total+iar[p];
+			p++;
+		}
+		System.out.printf("part 2 1-10總和:%d",total);
+	}
+
+}
