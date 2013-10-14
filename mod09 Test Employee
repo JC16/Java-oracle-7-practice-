@@ -2,10 +2,32 @@ import com.khh.gjun.Employee;
 public class TestEmployee {
 	public static void main(String[] args)
 	{
-		Employee emp1=new Employee();
+		//定義區域變數 類型自訂類別 stack
+		Employee emp1=new Employee(); //物件在Heap =將位址給emp1
+		//emp1.id=1; 隱藏的成員 封裝性
 		emp1.setId(1);
-		int id= emp1.getId();
-		emp1.setName("JC");
-		emp1.setSarlay(50000);
+		int id=emp1.getId();
+		emp1.setName("eric");
+		emp1.setSalary(60000);
+		//核算薪資(天數 月俸)
+		emp1.calSalary(21);
+		System.out.printf("員工編號:%s 姓名:%s 薪資:%10.2f \n",emp1.getId(),
+				emp1.getName(),
+				emp1.getActSalary());
+		
+		
+		//定義區域變數 類型自訂類別 stack
+		Employee emp2=new Employee(); //物件在Heap =將位址給emp1
+		//emp1.id=1; 隱藏的成員 封裝性
+		emp2.setId(3);
+		int id2=emp2.getId();
+		emp2.setName("bill");
+		emp2.setSalary(100000);
+		//核算薪資(天數 月俸)
+		emp2.calSalary(22);
+		System.out.printf("員工編號:%s 姓名:%s 薪資:%10.2f \n",emp2.getId(),
+				emp2.getName(),
+				emp2.getActSalary());
 	}
+
 }
