@@ -68,6 +68,10 @@ public class Employee {
 			actSalary=(days/22.0)*salary;
 		}//輸入內容出勤天數不合理 擲出例外物件給應用系統
 	}
-	
+	public void calSarlay(double hours)
+	{
+		ActSalary=hours*500;
+		
+	}
 
 }
