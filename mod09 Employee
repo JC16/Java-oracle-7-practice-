@@ -1,0 +1,44 @@
+package com.khh.gjun;
+
+public class Employee {
+	private int id;
+	private String name;
+	private String adress;
+	private double sarlay;
+	private double ActSarlay;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAdress() {
+		return adress;
+	}
+	public void setAdress(String adress) {
+		this.adress = adress;
+	}
+	public double getSarlay() {
+		return sarlay;
+	}
+	public void setSarlay(double sarlay) {
+		if( sarlay>=30000)
+		{
+			this.sarlay = sarlay;
+		}
+		else
+		{
+			this.sarlay=30000;
+		}
+	}
+	public double getActSarlay() {
+		return ActSarlay;
+	}
+	
+}
