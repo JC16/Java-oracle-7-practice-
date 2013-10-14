@@ -1,0 +1,11 @@
+import com.khh.gjun.Employee;
+public class TestEmployee {
+	public static void main(String[] args)
+	{
+		Employee emp1=new Employee();
+		emp1.setId(1);
+		int id= emp1.getId();
+		emp1.setName("JC");
+		emp1.setSarlay(50000);
+	}
+}
