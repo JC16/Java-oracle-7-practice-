@@ -1,16 +1,28 @@
 package com.khh.gjun;
 
 public class Employee {
+	//屬性Attribute
+	//封裝性設定 資訊隱藏 物件化(non-static)
+	//private-modifier修飾詞 現這一個類別可見
 	private int id;
 	private String name;
-	private String adress;
-	private double sarlay;
-	private double ActSarlay;
-	public int getId() {
-		return id;
+	private String address;
+	private double salary; //底薪
+	//實際薪資(月薪)
+	private double actSalary; //經過計算
+	
+	//沒有寫建構子 編譯產生預設建構子 Employee()
+	
+	//方法method 程序
+	//setter 設定
+	public void setId(int id)
+	{
+		this.id=id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	//getter
+	public int getId()
+	{
+		return id;
 	}
 	public String getName() {
 		return name;
@@ -18,27 +30,44 @@ public class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getAdress() {
-		return adress;
+	public String getAddress() {
+		return address;
 	}
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
-	public double getSarlay() {
-		return sarlay;
+	public double getSalary() {
+		return salary;
 	}
-	public void setSarlay(double sarlay) {
-		if( sarlay>=30000)
+	//底薪合理化
+	public void setSalary(double salary) {
+		//邏輯判斷
+		if(salary>=50000){
+			this.salary = salary;
+		}else
 		{
-			this.sarlay = sarlay;
+			this.salary=50000;
 		}
-		else
-		{
-			this.sarlay=30000;
-		}
+			
 	}
-	public double getActSarlay() {
-		return ActSarlay;
+	//getter 唯讀屬性
+	public double getActSalary()
+	{
+		return actSalary;
+	}
+	//實際薪資 需要經過較為複雜的方法計算--Business Rule商業規則方法
+	//架構 簽章 另一個本體 實作
+	/**
+	 * 薪資核算方法
+	 * @param days:int 出勤天數
+	 */
+	public void calSalary(int days)
+	{
+		//全勤22天
+		if(days>=0){
+			actSalary=(days/22.0)*salary;
+		}//輸入內容出勤天數不合理 擲出例外物件給應用系統
 	}
 	
+
 }
