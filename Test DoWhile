@@ -1,0 +1,37 @@
+package mod09loop;
+
+import java.util.Scanner;
+
+//輸入帳號驗證(只給三次)
+public class TestDoWhile {
+	public static void main(String[] args)
+	{
+		String userId;
+		int number=0;
+		do{
+			
+			number++;
+			if(number==4)
+			{
+				//終止
+				break;
+			}
+			System.out.printf("第幾次:%d 輸入帳號: \n",number);
+			//建構Scanner物件
+			Scanner scanner=new Scanner(System.in);
+			//取回字串
+			userId=scanner.next();
+			
+			
+		}while(userId.equals("eric"));
+		//判斷是否
+		if(number==4)
+		{
+			System.out.println("非法侵入!!");
+		}else
+		{
+			System.out.println("驗證通過!!");
+		}
+	}
+
+}
