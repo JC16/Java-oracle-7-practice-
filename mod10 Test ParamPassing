@@ -1,0 +1,35 @@
+import com.khh.gjun.Employee;
+
+//呼叫方法參數傳遞的方式
+public class TestParamPassing {
+	public static void main(String[] args)
+	{
+		int i1=100;
+		//直接呼叫類別成員(static  class Member)
+		valuePassing(i1); //i1的值 語法 by value(傳值)
+		System.out.println("原來的整數:"+i1);
+		Employee emp=new Employee();
+		emp.setSalary(50000);
+		//呼叫方法 傳遞物件的位址
+		referencePassing(emp);
+		System.out.printf("員工物件薪資:%.2f",emp.getSalary());
+		
+	}
+	
+	
+	//類別方法(類別成員 直接共用)
+	public static void valuePassing(int r1)
+	{
+		r1=200;
+		System.out.println("新的整數:"+r1);
+		
+	}
+	//傳遞物件進來處理 語法還是By value 因為傳遞的類別 參考型別 傳位址進來 
+	public static void referencePassing(Employee emp)
+	{
+		emp.setSalary(100000);
+		System.out.printf("傳遞進來的員工物件薪資:%.2f",emp.getSalary());
+	}
+	
+
+}
