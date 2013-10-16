@@ -1,0 +1,26 @@
+package com.khh.gjun;
+//測試回應值
+public class TestReturnValue {
+	public static void main(String[] args)
+	{
+		//建構員工物件
+		Employee emp=new Employee();
+		emp.setId(1);
+		emp.setName("eric");
+		emp.setAddress("高雄市");
+		emp.setSalary(70000);
+		
+		//呼叫物件方法產生一個新的員工物件
+		Employee newEmployee=emp.createEmployee();
+		newEmployee.setName("bill");
+		System.out.printf("原始員工姓名:%s 新員工物件姓名:%s 薪資:%.2f",emp.getName(),newEmployee.getName(),
+				newEmployee.getSalary());
+		//想盡量及時放掉員工物件
+		newEmployee=null;
+		emp.createEmployee(); //這一個 method又建構一個新的員工物件
+		//那一個沒有被參考員工 物件 在這裡有被GC收掉了
+		
+		
+	}
+
+}
