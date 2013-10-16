@@ -1,0 +1,101 @@
+package com.khh.gjun;
+
+public class Employee {
+	//屬性Attribute
+	//封裝性設定 資訊隱藏 物件化(non-static)
+	//private-modifier修飾詞 現這一個類別可見
+	private int id;
+	private String name;
+	private String address;
+	private double salary; //底薪
+	//實際薪資(月薪)
+	private double actSalary; //經過計算
+	
+	//沒有寫建構子 編譯產生預設建構子 Employee()
+	
+	//方法method 程序
+	//setter 設定
+	public void setId(int id)
+	{
+		this.id=id;
+	}
+	//getter
+	public int getId()
+	{
+		return id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	//底薪合理化
+	public void setSalary(double salary) {
+		//邏輯判斷
+		if(salary>=50000){
+			this.salary = salary;
+		}else
+		{
+			this.salary=50000;
+		}
+			
+	}
+	//getter 唯讀屬性
+	public double getActSalary()
+	{
+		return actSalary;
+	}
+	//實際薪資 需要經過較為複雜的方法計算--Business Rule商業規則方法
+	//架構 簽章 另一個本體 實作
+	/**
+	 * 月俸薪資核算方法
+	 * @param days:int 出勤天數
+	 */
+	public void calSalary(int days)
+	{
+		//全勤22天
+		if(days>=0){
+			actSalary=(days/22.0)*salary;
+		}//輸入內容出勤天數不合理 擲出例外物件給應用系統
+	}
+	
+	//OverLoading 方法名稱一樣(參數列不一樣)  不驗證回應值 不驗證修飾詞
+	/**
+	 * 時薪制薪資核算
+	 * @param hours 出勤時數:double
+	 * @return 實際薪資
+	 */
+	public double calSalary(double hours){
+		if(hours>=0){
+			actSalary=hours*500;
+		}
+		return actSalary;
+	}
+	//拷貝相對物件內容 產生一個新的員工物件
+	public Employee createEmployee()
+	{
+		//定義區域變數
+		Employee emp=new Employee(); //預設建構子
+		//相對物件內容複製一份給這一個emp新員工物件
+		emp.setId(this.id); //int 將整數內容複製一份給新的物件
+		emp.setName(this.name); //將name參考字串物件位址複製一份給新的物件
+		emp.setAddress(this.address);
+		emp.salary=this.salary; //salary private 因為是在同一個撰寫 管他物件與否照樣看得到
+		
+		return emp; //回傳參考物件的位址
+		
+	}//emp被釋放
+	
+	
+
+}
