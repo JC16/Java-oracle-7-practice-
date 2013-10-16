@@ -1,0 +1,21 @@
+import com.khh.gjun.Employee;
+public class TestEmployee {
+	//主程式
+	public static void main(String[] args)
+	{
+		//定義區域變數
+		//建構子 先鍊條到父親的建構子 建構子父親 在建構自己
+		
+		Employee emp=new Employee(); //預設建構子
+		//採用屬性注入setter
+		emp.setId(1);
+		emp.setName("eric");
+		emp.setAddress("高雄市");
+		emp.setSalary(600000);
+		
+		//能不能在建構員工物件的同時 初始化員工必要的一些資訊--靠自訂建構子
+		
+		
+	}
+
+}
